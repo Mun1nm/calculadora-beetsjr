@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Kadwa:wght@400;700&family=Kanit&family=Kantumruy+Pro&display=swap');
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(./fonts/LEMONMILK-Regular.otf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'LemonMilk';
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(img/galaxy2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.saida {
+    grid-column: 1 / -1;
+    background-color: rgba(2, 2, 2, 0.612);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.saida .operando-anterior {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.saida .operando-atual {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.calculadora {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculadora button {
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    margin: 2px;
+    transition: background-color 0.2s;
+}
+
+.calculadora > button:hover {
+    background-color: white;
+    color:rgb(18, 12, 75);
+}
+
+.calculadora .resultado {
+    grid-column: span 2;
+    background-color: orange;
+}
+
+.calculadora .resultado:hover {
+    background-color: rgb(178, 116, 0);
+    color: white;
+}
+
+.calculadora .operacao {
+    background-color: orange;
+}
+
+.calculadora .operacao:hover {
+    background-color: rgb(178, 116, 0);
+    color: white;
+}
+
+p {
+    font-family: 'Kantumruy Pro';
+    text-align: center;
+    color: white;
+}
+
+p a {
+    font-family: 'Kantumruy Pro';
+    color: white;
+}
